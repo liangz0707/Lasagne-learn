@@ -86,6 +86,7 @@ def main(num_epochs=3):
     network = build_mlp(input_var=input_var)
 
     prediction = lasagne.objectives.get_output(network)
+
     # ? categorical_crossentropy=True
     loss = lasagne.objectives.categorical_crossentropy(prediction, target_var)
     loss = loss.mean()
